@@ -4,6 +4,7 @@
 * [user]()
 
 	User Center!
+	
     用户中心!
 
 * [bill]()
@@ -15,7 +16,7 @@
 * [SQLAlchemy]()
 * [MongoEngine]()
 
-## How to start the application?
+## How to start this application?
 
 At first you should rename env.sample.py to env.py.
 
