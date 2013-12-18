@@ -13,3 +13,7 @@ ENV = ''
 
 # Application directory
 APP_DIR = '/your/application/directory'
+
+# Application host
+APP_HOST = ''
+APP_PORT = 5000

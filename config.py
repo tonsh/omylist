@@ -18,13 +18,6 @@ class Config(object):
     # Recommend enabled in testing environment.
     TESTING = False
 
-    # Application stored directory.
-    APP_DIR = env.APP_DIR
-
-    # Application host
-    APP_HOST = '0.0.0.0'
-    APP_PORT = 5000
-
 
 class ProductionConfig(Config):
     """ Production environment configuration. """
@@ -45,12 +38,3 @@ class DevelopmentConfig(Config):
     """
 
     DEBUG = True
-
-
-app_config = None
-if env.ENV == 'production':
-    app_config = ProductionConfig
-elif env.ENV == 'testing':
-    app_config = TestingConfig
-elif env.ENV == 'development':
-    app_config = DevelopmentConfig
