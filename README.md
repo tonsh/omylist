@@ -37,3 +37,14 @@ ENV = ''
 # Application directory
 APP_DIR = '/your/application/directory'
 ```
+
+Run the application server:
+
+运行服务：
+
+```
+python runserver.py
+```
+
+open `http://0.0.0.0:5000` in the browser.
+

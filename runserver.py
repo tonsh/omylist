@@ -4,6 +4,7 @@
 from flask import Flask
 
 import env
+from home import bp_home
 from user import bp_user
 
 
@@ -18,6 +19,7 @@ elif env.ENV == 'development':
     app.config.from_object('config.DevelopmentConfig')
 
 # regist blueprint
+app.register_blueprint(bp_home)
 app.register_blueprint(bp_user, url_prefix='/user')
 
 app.run(
