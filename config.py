@@ -4,8 +4,6 @@
     Diffrent environment have diffrent configurations.
 """
 
-import env
-
 
 class Config(object):
     """ The default configuration. """
