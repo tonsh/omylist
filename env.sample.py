@@ -8,6 +8,7 @@
       2. Config the configurations by your environment.
 """
 
+
 # environment (production, testing, development)
 ENV = ''
 
