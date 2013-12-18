@@ -1,16 +1,25 @@
 # coding=utf-8
 """ Server start """
 
-import env
-#from config import app_config
-from user import app
+from flask import Flask
 
+import env
+from user import bp_user
+
+
+app = Flask(__name__)
+
+# configuration
+conf = ''
 if env.ENV == 'production':
     app.config.from_object('config.ProductionConfig')
 elif env.ENV == 'testing':
     app.config.from_object('config.TestingConfig')
 elif env.ENV == 'development':
     app.config.from_object('config.DevelopmentConfig')
+
+# regist blueprint
+app.register_blueprint(bp_user, url_prefix='/user')
 
 app.run(
     host=env.APP_HOST,
