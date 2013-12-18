@@ -10,7 +10,6 @@ from user import bp_user
 app = Flask(__name__)
 
 # configuration
-conf = ''
 if env.ENV == 'production':
     app.config.from_object('config.ProductionConfig')
 elif env.ENV == 'testing':
