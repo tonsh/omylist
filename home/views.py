@@ -1,10 +1,6 @@
 # coding=utf-8
 
-from flask import Blueprint
-
-
-# home blueprint
-bp_home = Blueprint('bp_home', 'home')
+from home import bp_home
 
 
 @bp_home.route('/')

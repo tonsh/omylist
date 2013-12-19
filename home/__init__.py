@@ -1,5 +1,11 @@
 # coding=utf-8
 """ home application """
 
+from flask import Blueprint
 
-from views import bp_home
+
+# home blueprint
+bp_home = Blueprint('bp_home', __name__)
+
+
+import views

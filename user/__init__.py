@@ -1,5 +1,11 @@
 # coding=utf-8
 """ User Center Application """
 
+from flask import Blueprint
 
-from views import bp_user
+
+# User blueprint
+bp_user = Blueprint('bp_user', __name__)
+
+
+import views

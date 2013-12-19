@@ -1,11 +1,7 @@
 # coding=utf-8
 """ user views """
 
-from flask import Blueprint
-
-
-# User blueprint
-bp_user = Blueprint('bp_user', 'user')
+from user import bp_user
 
 
 @bp_user.route('/')
