@@ -4,7 +4,6 @@
 * [user]()
 
 	User Center!
-	
     用户中心!
 
 * [bill]()
@@ -16,36 +15,17 @@
 * [SQLAlchemy]()
 * [MongoEngine]()
 
-## How to start this application?
+## How to start the application?
 
-At first you should rename env.sample.py to env.py.
+At first you should rename config.sample.py to config.py.
 
-首先需要把样例文件重命名为 env.py.
+首先需要把样例配置文件重命名为 config.py.
 
-
-```
-cp env.sample.py env.py
-```
-
-Then you should change the env.py configurations depending on your applicaiton environment:
-
-然后, 需要根据应用环境修改 env.py 的配置：
 
 ```
-# environment (production, testing, development)
-ENV = ''
-
-# Application directory
-APP_DIR = '/your/application/directory'
+cp config.sample.py config.py
 ```
 
-Run the application server:
+Then you should change the config.py configurations depending on your applicaiton environment:
 
-运行服务：
-
-```
-python runserver.py
-```
-
-open `http://0.0.0.0:5000` in the browser.
-
+然后, 需要根据应用环境修改 config.py 的配置。
