@@ -3,7 +3,7 @@
 
 from flask import Flask
 
-import settings
+import config
 from home import bp_home
 from user import bp_user
 
@@ -11,21 +11,21 @@ from user import bp_user
 app = Flask(__name__)
 
 # configuration
-if settings.ENV == 'production':
+if config.ENV == 'production':
     app.config.from_object('app_config.ProductionConfig')
-elif settings.ENV == 'testing':
+elif config.ENV == 'testing':
     app.config.from_object('app_config.TestingConfig')
-elif settings.ENV == 'development':
+elif config.ENV == 'development':
     app.config.from_object('app_config.DevelopmentConfig')
 
 # setting secret key
-app.secret_key = settings.APP_SECRET_KEY
+app.secret_key = config.APP_SECRET_KEY
 
 # regist blueprint
 app.register_blueprint(bp_home)
 app.register_blueprint(bp_user, url_prefix='/user')
 
 app.run(
-    host=settings.APP_HOST,
-    port=settings.APP_PORT,
+    host=config.APP_HOST,
+    port=config.APP_PORT,
 )
