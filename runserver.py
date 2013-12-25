@@ -18,6 +18,9 @@ elif settings.ENV == 'testing':
 elif settings.ENV == 'development':
     app.config.from_object('app_config.DevelopmentConfig')
 
+# setting secret key
+app.secret_key = settings.APP_SECRET_KEY
+
 # regist blueprint
 app.register_blueprint(bp_home)
 app.register_blueprint(bp_user, url_prefix='/user')

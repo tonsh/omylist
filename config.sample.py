@@ -1,7 +1,9 @@
 # coding=utf-8
 """ Environment Config.
 
-    Diffrent environment have diffrent configurations. You might want to change the configurations depending on the application environment.
+    Diffrent environment have diffrent configurations.
+    You might want to change the configurations depending on the application
+    environment.
 
     What you should do?
       1. Copy the env.sample.py file to env.py!
@@ -18,3 +20,6 @@ APP_DIR = '/your/application/directory'
 # Application host
 APP_HOST = ''
 APP_PORT = 5000
+
+# In order to use sessions you have to set a secret key.
+APP_SECRET_KEY = '123456'
