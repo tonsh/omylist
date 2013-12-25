@@ -6,7 +6,7 @@
     environment.
 
     What you should do?
-      1. Copy the env.sample.py file to env.py!
+      1. Copy the env_config.sample.py file to env_config.py!
       2. Config the configurations by your environment.
 """
 
