@@ -11,12 +11,12 @@ from user import bp_user
 app = Flask(__name__)
 
 # configuration
-if env.ENV == 'production':
-    app.config.from_object('config.ProductionConfig')
-elif env.ENV == 'testing':
-    app.config.from_object('config.TestingConfig')
-elif env.ENV == 'development':
-    app.config.from_object('config.DevelopmentConfig')
+if settings.ENV == 'production':
+    app.config.from_object('app_config.ProductionConfig')
+elif settings.ENV == 'testing':
+    app.config.from_object('app_config.TestingConfig')
+elif settings.ENV == 'development':
+    app.config.from_object('app_config.DevelopmentConfig')
 
 # regist blueprint
 app.register_blueprint(bp_home)
