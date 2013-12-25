@@ -3,7 +3,7 @@
 
 from flask import Flask
 
-import config
+import settings
 from home import bp_home
 from user import bp_user
 
@@ -11,11 +11,11 @@ from user import bp_user
 app = Flask(__name__)
 
 # configuration
-if config.ENV == 'production':
+if settings.ENV == 'production':
     app.config.from_object('app_config.ProductionConfig')
-elif config.ENV == 'testing':
+elif settings.ENV == 'testing':
     app.config.from_object('app_config.TestingConfig')
-elif config.ENV == 'development':
+elif settings.ENV == 'development':
     app.config.from_object('app_config.DevelopmentConfig')
 
 # regist blueprint
@@ -23,6 +23,6 @@ app.register_blueprint(bp_home)
 app.register_blueprint(bp_user, url_prefix='/user')
 
 app.run(
-    host=config.APP_HOST,
-    port=config.APP_PORT,
+    host=settings.APP_HOST,
+    port=settings.APP_PORT,
 )
