@@ -5,6 +5,7 @@ from flask import Flask
 
 import config
 from home import bp_home
+from oauth import bp_douban, bp_sina
 from user import bp_user
 
 
@@ -24,6 +25,8 @@ app.secret_key = config.APP_SECRET_KEY
 # regist blueprint
 app.register_blueprint(bp_home)
 app.register_blueprint(bp_user, url_prefix='/user')
+app.register_blueprint(bp_douban, url_prefix='/douban')
+app.register_blueprint(bp_sina, url_prefix='/sina')
 
 app.run(
     host=config.APP_HOST,
