@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from flask import redirect, request, Response
+from flask import redirect, Response
 
 from home import bp_home
 
@@ -11,10 +11,11 @@ def index():
 
 
 @bp_home.route('/login')
-def login():
-    t = request.args.get('type')
-    if t == 'sina':
+@bp_home.route('/login/<name>')
+def login(name=None):
+    if name == 'sina':
         return redirect('/sina/authorize')
-    elif t == 'douban':
+    elif name == 'douban':
         return redirect('/douban/authorize')
+
     return Response('login page')
